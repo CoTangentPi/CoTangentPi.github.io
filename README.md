@@ -1,1 +1,1 @@
-# CoTangentPi.github.io
+Please visit chachi.cc for more detailed documentation

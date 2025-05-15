@@ -26,6 +26,23 @@
             align-items: center;
             height: 100vh;
             color: var(--text);
+            position: relative;
+        }
+
+        .links {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .links a {
+            color: var(--highlight);
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
         }
 
         .container {
@@ -51,6 +68,10 @@
     </style>
 </head>
 <body>
+    <div class="links">
+        <a href="archive/visionlead">archive/vision lead</a>
+    </div>
+
     <div class="container">
         <h1>Chachi Han</h1>
         <p>Contact: <a href="mailto:contact@chachi.cc">contact@chachi.cc</a></p>

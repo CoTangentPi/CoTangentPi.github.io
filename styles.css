@@ -1,0 +1,49 @@
+/* Shared styles for all pages */
+:root {
+    /* --bg: #64665B; Neutral gray with green */
+    --bg: #7A8170; /* Brighter neutral gray with green */
+    /* --text: #A17445; Warm brown */
+    --text: #000000; /* Black text */
+    --accent: #364430; /* Dark muted green */
+    --highlight: #344A61; /* Deep cool blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    font-family: "Times New Roman", Times, serif;
+    color: var(--text);
+}
+
+/* Common utility classes */
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Link styles */
+a {
+    color: var(--highlight);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    max-height: 100%;
+}

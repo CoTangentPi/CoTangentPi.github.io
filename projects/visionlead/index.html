@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Lead Project</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .project-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .project-title {
+      color: var(--accent);
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .project-description {
+      color: var(--text);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-link {
+      background: var(--highlight);
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 2px 8px rgba(52,68,97,0.10);
+      letter-spacing: 0.5px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .project-link:hover {
+      background: var(--accent);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .poster-section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .poster-container {
+      display: inline-block;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .poster-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      color: var(--highlight);
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .project-details {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    .project-details h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .project-details p, .project-details ul {
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .project-details ul {
+      list-style-type: disc;
+      padding-left: 2em;
+      margin-bottom: 1em;
+    }
+
+    .project-details li {
+      margin-bottom: 0.5em;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      
+      .project-title {
+        font-size: 2rem;
+      }
+      
+      .project-links {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../../" class="back-link">← Back to Home</a>
+
+  <div class="project-header">
+    <h1 class="project-title">Vision Lead: Smart Cane for the Visually Impaired</h1>
+    <p class="project-description">
+      Vision Lead is a smart cane designed to help visually impaired individuals navigate the world using haptic feedback and auditory alerts, paired with GPS-based directions. The project integrates affordable technology into a standard white cane, enhancing independence and safety.
+    </p>
+  </div>
+
+  <div class="project-links">
+    <a href="https://github.com/CoTangentPi/VisionLead" class="project-link" target="_blank">
+      🚀 View on GitHub (with Video Demo)
+    </a>
+  </div>
+  <div style="text-align:center; margin-bottom:2rem; color:var(--highlight); font-size:1.1rem;">
+    <strong>Video demo of the embedded system is available on the GitHub repository.</strong>
+  </div>
+
+  <div class="poster-section" id="poster">
+    <div class="poster-container">
+      <img src="vision_lead_poster.png" alt="Vision Lead Project Poster" class="poster-image">
+    </div>
+  </div>
+
+  <div class="project-details">
+    <h3>Executive Summary</h3>
+    <p>
+      Vision Lead addresses the challenge faced by visually impaired individuals in navigating unfamiliar locations. Existing solutions are either basic or prohibitively expensive. Our smart cane integrates GPS navigation, haptic feedback, and auditory alerts at a cost below $300, making advanced mobility assistance more accessible.
+    </p>
+    <h3>The Problem</h3>
+    <p>
+      Visually impaired people often struggle to travel independently, especially in new environments. Traditional white canes offer limited functionality, and advanced solutions are costly. Vision Lead aims to provide affordable, feature-rich navigation assistance.
+    </p>
+    <h3>The Solution</h3>
+    <ul>
+      <li>Smart cane handle with embedded electronics (Arduino Nano BLE 33, custom PCB, vibration motors, speaker, rechargeable battery)</li>
+      <li>Bluetooth Low Energy (BLE) connection to a companion Android app</li>
+      <li>App provides GPS directions via Google Maps API, relayed to the cane for haptic and audio guidance</li>
+      <li>3D-printed ergonomic enclosure, designed for comfort and durability</li>
+    </ul>
+    <h3>Key Features & Functionalities</h3>
+    <ul>
+      <li><strong>GPS Navigation:</strong> Real-time directions from the app to the cane</li>
+      <li><strong>Haptic Feedback:</strong> Dual vibration motors provide directional cues (left, right, forward, stop, arrival)</li>
+      <li><strong>Audio Notifications:</strong> Speaker emits distinct tones for each instruction</li>
+      <li><strong>Long Battery Life:</strong> Up to 20 hours of typical use</li>
+      <li><strong>Affordable:</strong> Total build cost under $110</li>
+    </ul>
+    <h3>Technical Specifications</h3>
+    <ul>
+      <li>Haptic Motors: Coin vibration motors, < 100ms response time</li>
+      <li>Battery: 3.7V 1000mAh Li-ion, USB-C charging, 1hr recharge</li>
+      <li>Speaker: 1W output, distinct audio patterns</li>
+      <li>Custom PCB: Integrates all electronics, designed for protection and compactness</li>
+      <li>Weight: &lt; 350g, ergonomic 3D-printed handle</li>
+      <li>Water/dust resistance: Basic, with future improvements planned</li>
+    </ul>
+    <h3>Validation & Results</h3>
+    <ul>
+      <li>Battery life: 20+ hours normal use, 6+ hours in extreme cold</li>
+      <li>Haptic feedback: Reliable, distinct patterns for navigation</li>
+      <li>Audio: Effective in most environments, limited in high noise</li>
+      <li>Enclosure: Durable, but water/dust resistance can be improved</li>
+      <li>Automated and manual testing: BLE connectivity, vibration, and audio validated</li>
+    </ul>
+  </div>
+</body>
+</html>

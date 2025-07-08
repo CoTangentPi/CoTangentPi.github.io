@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AceTrack Project</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body {
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .placeholder-container {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .placeholder-title {
+      color: var(--accent);
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .placeholder-message {
+      color: var(--text);
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+
+    .coming-soon {
+      color: var(--highlight);
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      color: var(--highlight);
+      text-decoration: none;
+      font-size: 1.1rem;
+      z-index: 10;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .placeholder-container {
+        padding: 2rem 1rem;
+      }
+      
+      .placeholder-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .back-link {
+        position: static;
+        display: block;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../../" class="back-link">← Back to Home</a>
+
+  <div class="placeholder-container">
+    <h1 class="placeholder-title">AceTrack</h1>
+    <p class="placeholder-message">
+      This project page is currently under construction.
+    </p>
+    <p class="coming-soon">
+      More updates are coming soon!
+    </p>
+  </div>
+</body>
+</html>

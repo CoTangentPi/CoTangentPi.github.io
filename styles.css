@@ -95,7 +95,7 @@ a:hover {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem; 
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -113,6 +113,28 @@ a:hover {
 }
 
 .back:hover {
+    text-decoration: underline;
+}
+
+/* ====== CONTACT LINKS (bottom-left) ====== */
+.contact {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* match .nav gap */
+    font-size: 1.2rem; 
+    text-align: left;
+    z-index: 10;
+}
+
+.contact a {
+    color: var(--highlight);
+    text-decoration: none;
+}
+
+.contact a:hover {
     text-decoration: underline;
 }
 
